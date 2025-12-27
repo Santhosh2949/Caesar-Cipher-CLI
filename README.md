@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Caesar-Cipher-CLI
+=======
 # Caesar Cipher CLI Tool
 
     A simple command-line tool to encrypt and decrypt text using the **Caesar Cipher** algorithm.  
@@ -70,3 +73,4 @@ The Caesar Cipher shifts each letter by a fixed number of positions in the alpha
 ## Author
 
     Santhosh Kumar
+>>>>>>> 705b500 (Caesar-Cipher-cli)
