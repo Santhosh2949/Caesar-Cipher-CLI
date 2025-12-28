@@ -1,5 +1,4 @@
 import argparse
-import sys
 
 
 def caesar(text: str, shift: int, encrypt: bool = True) -> str:
@@ -20,8 +19,8 @@ def caesar(text: str, shift: int, encrypt: bool = True) -> str:
 def validate_text(text: str ) -> None:
     
     if not all(ch.isalpha() or ch.isspace() for ch in text):
-        print("Error: text must contain only letters and spaces")
-        sys.exit(1)
+        raise ValueError("Text must contain only letters and spaces")
+         
 
 
 def main():
@@ -35,7 +34,10 @@ def main():
 
     args = parser.parse_args()
 
-    validate_text(args.text)
+    try:
+        validate_text(args.text)
+    except ValueError as e:
+        parser.error(str(e))
 
     result = caesar(args.text,args.shift,encrypt=not args.decrypt)
 

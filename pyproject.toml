@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "caesar-cipher-cli"
+version = "0.1.0"
+description = "A command-line tool for Caesar cipher encryption and decryption"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Santhosh Kumar Nethula"}]
+license = { text = "LICENSE" }
+urls = {"Homepage" = "https://github.com/Santhosh2949", "Source" = "https://github.com/Santhosh2949/caesar-cipher-cli"}
+
+[project.scripts]
+caesar = "caesar_cipher.cli:main"

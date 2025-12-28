@@ -1,76 +1,83 @@
-<<<<<<< HEAD
-# Caesar-Cipher-CLI
-=======
 # Caesar Cipher CLI Tool
 
-    A simple command-line tool to encrypt and decrypt text using the **Caesar Cipher** algorithm.  
-    Built with Python using clean argument parsing and case-preserving encryption.
+A lightweight command-line tool written in Python to encrypt and decrypt text using the Caesar cipher algorithm.
+
+This project demonstrates building, packaging, and distributing a Python CLI tool using modern Python standards.
 
 ---
 
 ## Features
-    - Encrypt and decrypt text using a shift value
-    - Preserves uppercase and lowercase letters
-    - Supports spaces in text
-    - Command-line interface using `argparse`
-    - Handles invalid input gracefully
+
+- Encrypt and decrypt text using the Caesar cipher technique
+- Command-line interface with clear flags and help output
+- Supports custom shift values
+- Handles both encryption and decryption modes
+- Packaged as a pip-installable CLI tool
+- Clean project structure with proper metadata
 
 ---
 
-## Requirements
-    - Python 3.7 or higher
+## Installation
 
----
-
-## Usage
+## Installation
+For Users to use 
 ```bash
-  Encrypt Text
-    python caesar.py -t "Hello World" -s 3
-  Output:
-        Khoor Zruog
-  Decrypt Text
-    python caesar.py -t "Khoor Zruog" -s 3 -d
-  Output:
-        Hello World
+pip install caesar-cipher-cli
 ```
-## Command-Line Arguments
-Argument	    Description
--t, --text	    Text to encrypt or decrypt (letters and spaces only)
--s, --shift	    Shift value (integer)
--d, --decrypt   Decrypt mode (optional flag)
+For Developers to contribute 
+```bash
+git clone https://github.com/Santhosh2949/caesar-cipher-cli
+cd caesar-cipher-cli
+pip install .
 
-## Input Rules
+Usage
 
-    Only alphabetic characters and spaces are allowed
+After installation, use the caesar command directly from the terminal.
 
-    Numbers and special characters are rejected
+Encrypt text
+caesar --text "hello" --shift 3
 
-    Shift values are automatically normalized (e.g., 29 → 3)
 
-## How It Works
+Output:
 
-The Caesar Cipher shifts each letter by a fixed number of positions in the alphabet.
+khoor
 
-    Encryption shifts letters forward
+Decrypt text
+caesar --text "khoor" --shift 3 --decrypt
 
-    Decryption shifts letters backward
 
-    Case is preserved
+Output:
 
-    Spaces remain unchanged
+hello
+```
 
-## Example
+## Command Options
+caesar --help
 
-    Input:
-        Attack At Dawn
-    
-    Shift:
-        5
-    
-    Output:
-        Fyyfhp Fy Ifbs
 
-## Author
+## Available options:
 
-    Santhosh Kumar
->>>>>>> 705b500 (Caesar-Cipher-cli)
+--text : Text to encrypt or decrypt
+
+--shift : Shift value for the cipher
+
+--decrypt : Enable decryption mode
+
+## Project Structure
+caesar-cipher-cli/
+├── caesar_cipher/
+│   ├── __init__.py
+│   └── cli.py
+├── pyproject.toml
+├── README.md
+└── LICENSE
+
+## Technologies Used
+
+Python 3
+
+argparse (standard library)
+
+Git & GitHub
+
+Python packaging (pyproject.toml)
