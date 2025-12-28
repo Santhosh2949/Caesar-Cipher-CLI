@@ -18,8 +18,6 @@ This project demonstrates building, packaging, and distributing a Python CLI too
 ---
 
 ## Installation
-
-## Installation
 For Users to use 
 ```bash
 pip install caesar-cipher-cli
@@ -64,6 +62,7 @@ caesar --help
 --decrypt : Enable decryption mode
 
 ## Project Structure
+```
 caesar-cipher-cli/
 ├── caesar_cipher/
 │   ├── __init__.py
@@ -71,7 +70,7 @@ caesar-cipher-cli/
 ├── pyproject.toml
 ├── README.md
 └── LICENSE
-
+```
 ## Technologies Used
 
 Python 3
