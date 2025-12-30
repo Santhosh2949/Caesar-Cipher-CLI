@@ -1,4 +1,7 @@
 # Changelog
+## [0.1.2] - 30-12-2025
+### Fixed
+- Corrected README formatting and examples
 
 ## [0.1.1] - 30-12-2025
 ### Changed

@@ -16,26 +16,26 @@ This project demonstrates building, packaging, and distributing a Python CLI too
 - Clean project structure with proper metadata
 
 ---
-## As a Library
+
+
+## Installation
+For Users 
+```bash
+pip install caesar-cipher-cli
+```
+As a Library
 ```python
 from caesar_cipher import caesar
 print(caesar("hello", 3)) # Encryption...
 print(caesar("khoor", 3,encrypt=False))  # Decryption...
 ```
-## Installation
-
-## Installation
-For Users to use 
-```bash
-pip install caesar-cipher-cli
-```
-#For Developers to contribute 
+For Developers to contribute 
 ```bash
 git clone https://github.com/Santhosh2949/caesar-cipher-cli
 cd caesar-cipher-cli
 pip install .
-
-Usage
+```
+## Usage
 
 After installation, use the caesar command directly from the terminal.
 
@@ -54,29 +54,34 @@ caesar --text "khoor" --shift 3 --decrypt
 Output:
 
 hello
-```
+
 
 ## Command Options
 caesar --help
 
 
 ## Available options:
+```
+--text              : Text to encrypt or decrypt
 
---text : Text to encrypt or decrypt
+--shift             : Shift value for the cipher
 
---shift : Shift value for the cipher
-
---decrypt : Enable decryption mode
-
+--decrypt           : Enable decryption mode
+```
 ## Project Structure
 ```
 caesar-cipher-cli/
 ├── caesar_cipher/
 │   ├── __init__.py
+│   ├── core.py
 │   └── cli.py
+├── tests/
+│   └── test_core.py
 ├── pyproject.toml
+├── CHANGELOG.md
 ├── README.md
 └── LICENSE
+
 ```
 ## Technologies Used
 
