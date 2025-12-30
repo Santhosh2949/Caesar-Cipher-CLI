@@ -72,10 +72,15 @@ caesar --help
 caesar-cipher-cli/
 ├── caesar_cipher/
 │   ├── __init__.py
+│   ├── core.py
 │   └── cli.py
+├── tests/
+│   └── test_core.py
 ├── pyproject.toml
+├──CHANGELOG.md
 ├── README.md
 └── LICENSE
+
 ```
 ## Technologies Used
 
