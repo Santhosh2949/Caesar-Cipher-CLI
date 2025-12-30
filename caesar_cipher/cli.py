@@ -1,20 +1,5 @@
 import argparse
-
-
-def caesar(text: str, shift: int, encrypt: bool = True) -> str:
-    
-    alphabet = "abcdefghijklmnopqrstuvwxyz"
-    shift %= 26
-
-    if not encrypt:
-        shift = -shift
-
-    shifted = alphabet[shift:] + alphabet[:shift]
-
-    table = str.maketrans(alphabet + alphabet.upper(),shifted + shifted.upper())
-
-    return text.translate(table)
-
+from caesar_cipher.core import caesar
 
 def validate_text(text: str ) -> None:
     
@@ -42,7 +27,3 @@ def main():
     result = caesar(args.text,args.shift,encrypt=not args.decrypt)
 
     print(result)
-
-
-if __name__ == "__main__":
-    main()
