@@ -24,7 +24,6 @@ print(caesar("khoor", 3,encrypt=False))  # Decryption...
 ```
 ## Installation
 
-## Installation
 For Users to use 
 ```bash
 pip install caesar-cipher-cli
